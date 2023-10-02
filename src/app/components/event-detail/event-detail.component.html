@@ -1,0 +1,33 @@
+<mat-card class="event-detail-container">
+  <mat-card-header class="event-detail-header">
+    <div class="header-column">
+      <bet-status class="status" [betStatus]="eventDetail.status"></bet-status>
+      <div class="date">{{ eventDetail.date | date : "mediumDate" }}</div>
+    </div>
+  </mat-card-header>
+  <mat-card-content class="event-detail-content">
+    <mat-card class="team">
+      <mat-card-content class="team-content">
+        <img [src]="'/assets/'+eventDetail.team1.image" class="image"/>
+        <div class="team-title">{{ eventDetail.team1.name }}</div>
+      </mat-card-content>
+    </mat-card>
+    <div class="result-list">
+      <div class="result" *ngFor="let result of eventDetail.result">
+        {{ result }}
+      </div>
+    </div>
+    <mat-card class="team">
+      <mat-card-content class="team-content">
+        <img [src]="'/assets/'+eventDetail.team2.image" class="image"/>
+        <div class="team-title">{{ eventDetail.team2.name }}</div>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+  <mat-card-actions class="event-actions" *ngIf="eventDetail.status !== 'FINISHED'">
+    <button mat-button class="event-button" *ngFor="let betRate of eventDetail.betRates" (click)="openBetModal(betRate)">
+        <span class="bet">{{ betRate.name }}</span>
+        <span class="rate"> {{ betRate.rate }}</span>
+    </button>
+  </mat-card-actions>
+</mat-card>

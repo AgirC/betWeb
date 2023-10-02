@@ -1,0 +1,24 @@
+<div class="event-list-container">
+    <mat-accordion multi>
+      <mat-expansion-panel *ngFor="let betEvent of eventList" class="event-list-item">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="title"> 
+            <mat-icon class="icon">{{betEvent.iconName}}</mat-icon>
+            <span class="text">{{betEvent.sportName}}</span>
+            </mat-panel-title>
+          <mat-panel-description class="description">
+            <div class="team">
+                <span> {{ betEvent.team1.name }} </span>  
+            </div>
+            <span class="separator"> vs </span> 
+            <div class="team">
+                <span> {{ betEvent.team2.name }} </span>  
+            </div>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <event-detail [eventDetail]="betEvent" [userCapital]="userCapital"></event-detail>
+        <!-- <bet-form></bet-form> -->
+      </mat-expansion-panel>
+    </mat-accordion>
+
+</div>

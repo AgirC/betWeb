@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>
+    <span class="title">{{'bet-form.title' | translate}}: </span>
+    <span class="option">{{data.betRate.name}}</span>
+</h1>
+<div mat-dialog-content>
+  <p>{{'bet-form.how-much' | translate}}</p>
+  <mat-form-field>
+    <mat-label>{{'bet-form.amount' | translate}}</mat-label>
+    <input matInput type="number" [formControl]="betAmount">
+    <mat-error *ngIf="!betAmount.valid">{{'bet-form.error' | translate}} {{data.userCapital}}€</mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">{{'bet-form.cancel' | translate}}</button>
+  <button class="ok-button" mat-button [mat-dialog-close]="betAmount.value" cdkFocusInitial [disabled]="!betAmount.valid">{{'bet-form.ok' | translate}}</button>
+</div>

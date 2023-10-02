@@ -1,0 +1,25 @@
+<div class="bets-history-container">
+  <div class="bets-history-list">
+    <h1 class="title-list">{{ "bets-history.title-list" | translate }}</h1>
+
+    <mat-list class="bet-list">
+      <mat-list-item *ngFor="let bet of bets" class="bet-item">
+        <bet-status
+          [betStatus]="bet.betEvent.status"
+          class="status"
+        ></bet-status>
+        <div class="bet-date">{{ bet.date | date: 'mediumDate'}}</div>
+        <div class="bet-amount">
+          <span class="text">
+            {{ "bets-history.bet-amount" | translate }}:
+          </span>
+          <span class="value"> {{ bet.betAmount }}€ </span>
+        </div>
+        <mat-icon class="icon winner" *ngIf="bet.winner">thumb_up</mat-icon>
+        <mat-icon class="icon looser" *ngIf="!bet.winner">thumb_down</mat-icon>
+        <div class="bet-result">{{ bet.betResult }}€</div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <user-info [bets]="bets" [userInfo]="userInfo" class="user-info"></user-info>
+</div>

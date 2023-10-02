@@ -1,0 +1,87 @@
+.event-detail-container {
+    background-color: #383838;
+    color: white;
+    box-shadow: none;
+    max-width: 80%;
+
+    .event-detail-header {
+        justify-content: center;
+        margin-bottom: 20px;
+
+        .header-column {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 24px;
+            line-height: 32px;
+
+            .icon {
+                margin: auto;
+                font-size: 32px;
+                height: 32px;
+                width: 32px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .event-detail-content {
+        display: flex;
+        justify-content: center;
+
+        .team {
+            margin: 20px;
+            min-width: 150px;
+            text-align: center;
+            background-color: #383838;
+            color: white;
+            box-shadow:
+                0px 2px 1px -1px #666,
+                0px 1px 1px 0px #666,
+                0px 1px 3px 0px #666;
+                
+            .team-content {
+
+                .image {
+                    max-width: 100px;
+                    max-height: 100px;
+                }
+
+                .team-title {
+                    font-size: large;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .result-list {
+            font-size: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .result {
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    .event-actions {
+        display: flex;
+        justify-content: center;
+
+        .event-button {
+            width: 150px;
+            border: 1px solid #666;
+            margin: 10px;
+
+            &:hover {
+                background-color: #666;
+            }
+
+            .rate {
+                color: yellow;
+            }
+        }
+    }
+}

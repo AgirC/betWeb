@@ -1,0 +1,46 @@
+.user-info-container {
+    .title {
+        margin: 20px 12px;
+    }
+
+    .user-info-content {
+        display: flex;
+        flex-direction: row;
+        margin: 12px;
+
+        .user {
+            flex: 1;
+            max-width: 150px;
+            text-align: center;
+            background-color: #383838;
+            color: white;
+            box-shadow:
+                0px 2px 1px -1px #666,
+                0px 1px 1px 0px #666,
+                0px 1px 3px 0px #666;
+
+            .user-content {
+                .icon {
+                    width: 100px;
+                    height: 100px;
+                    font-size: 90px;
+                }
+
+                .user-name {
+                    font-size: large;
+                }
+
+                .user-capital {
+                    font-size: x-large;
+                    font-weight: bold;
+                    margin-top: 12px;
+                }
+            }
+        }
+
+        .chart {
+            flex: 2;
+            margin-left: 12px;
+        }
+    }
+}

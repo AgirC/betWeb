@@ -1,0 +1,14 @@
+.status-component{
+    font-size: medium;
+    
+    &.in-game {
+        color: green;
+    }
+    &.finished {
+        color: white;
+
+    }
+    &.not-started {
+        color: yellow;
+    }
+}

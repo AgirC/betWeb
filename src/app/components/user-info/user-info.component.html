@@ -1,0 +1,14 @@
+<div class="user-info-container">
+  <h1 class="title">{{ "user-info.title" | translate }}</h1>
+  <div class="user-info-content">
+    <mat-card class="user">
+      <mat-card-content class="user-content">
+        <mat-icon class="icon">person_outline</mat-icon>
+        <div class="user-name">{{userInfo.name}}</div>
+        <div class="user-capital">{{userInfo.currentCapital}}€</div>
+      </mat-card-content>
+    </mat-card>
+
+    <chart [bets]="bets" class="chart"></chart>
+  </div>
+</div>

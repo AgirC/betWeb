@@ -1,0 +1,74 @@
+.bets-history-container {
+    display: flex;
+
+    .bets-history-list {
+        flex: 1;
+
+        .title-list {
+            margin: 20px;
+        }
+
+        .bet-list {
+            margin: 12px;
+            overflow: auto;
+            max-height: 190px;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .bet-item {
+                color: white;
+                border-bottom: 1px solid #666;
+
+                .status {
+                    flex: 3;
+                    margin-right: 12px;
+                }
+                .bet-date {
+                    flex: 3;
+                    margin-right: 12px;
+                }
+
+                .bet-amount {
+                    flex: 3;
+                    margin-right: 12px;
+
+                    .text {
+                        font-size: medium;
+                        font-weight: normal;
+                    }
+
+                    .value {
+                        font-size: large;
+                        font-weight: bold;
+                    }
+                }
+
+                .icon {
+                    flex: 1;
+                    margin-right: 12px;
+
+                    &.winner {
+                        color: green;
+                    }
+
+                    &.looser {
+                        color: red;
+                    }
+                }
+
+                .bet-result {
+                    flex: 1;
+                    font-size: x-large;
+                    font-weight: bold;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .user-info {
+        flex: 1;
+    }
+}

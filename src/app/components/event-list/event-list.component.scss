@@ -1,0 +1,35 @@
+.event-list-container {
+    .event-list-item {
+        background-color: #383838;
+
+        .title {
+            color: white;
+        }
+
+        .description {
+            color: white;
+        }
+
+        ::ng-deep.mat-expansion-indicator::after {
+            color: white;
+        }
+
+        .icon {
+            margin-right: 20px;
+        }
+
+        .text {
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .separator {
+            margin: 0 10px;
+        }
+
+        .team {
+            font-size: large;
+            font-weight: bold;
+        }
+    }
+}

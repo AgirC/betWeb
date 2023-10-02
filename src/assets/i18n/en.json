@@ -1,0 +1,36 @@
+{
+    "sports-betting": {
+        "title1": "Bet",
+        "title2": "Web",
+        "title-list": "List of events"
+    },
+    "bet": {
+        "status": {
+            "IN_GAME": "In Game now",
+            "FINISHED": "Finished",
+            "NOT_STARTED": "Not started yet"
+        }
+    },
+    "bets-history": {
+        "title-list": "List of bets",
+        "bet-amount": "Amount bet"
+    },
+    "user-info":{
+        "title": "User information",
+        "name": "User name",
+        "capital": "Current capital"
+    },
+    "bet-form": {
+        "title": "You have selected option",
+        "how-much": "How much do you want to bet?",
+        "amount": "Amount to bet",
+        "cancel": "Cancel",
+        "ok": "Ok",
+        "error": "You can not bet more than "
+    },
+    "chart": {
+        "result": "Bet result",
+        "title": "Last 5 bets"
+    }
+
+}

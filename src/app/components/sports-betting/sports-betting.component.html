@@ -1,0 +1,21 @@
+<div class="sports-betting-content">
+  <header>
+    <mat-toolbar class="header-toolbar">
+      <span class="title1">{{ "sports-betting.title1" | translate }}</span>
+      <span class="title2">{{ "sports-betting.title2" | translate }}</span>
+    </mat-toolbar>
+  </header>
+
+  <main class="container">
+    <div class="banner">
+      <img class="image" src="/assets/banner.png" />
+    </div>
+    <h1 class="title-list">{{ "sports-betting.title-list" | translate }}</h1>
+    <event-list [eventList]="betEvents" [userCapital]="userInfo.currentCapital" *ngIf="!showBetEventsSpinner"></event-list>
+    <mat-spinner *ngIf="showBetEventsSpinner" class="spinner" ></mat-spinner>
+  </main>
+
+  <footer class="footer">
+    <bets-history [bets]="betHistory" [userInfo]="userInfo" *ngIf="betHistory && userInfo" ></bets-history>
+  </footer>
+</div>

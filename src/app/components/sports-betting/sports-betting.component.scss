@@ -1,0 +1,65 @@
+.sports-betting-content {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+
+    .header-toolbar {
+        background-color: #126e51;
+        font-size: x-large;
+
+        .title1 {
+            color: white;
+        }
+
+        .title2 {
+            color: yellowgreen;
+        }
+    }
+    
+    .container {
+        flex: 1;
+        max-height: calc(100vh - 30% - 65px);
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    
+        .banner {
+            max-height: 260px;
+            overflow: hidden;
+    
+            .image {
+                transform: translate(0, -20%);
+                width: 100%;
+            }
+        }
+    
+        .title-list {
+            margin: 20px;
+        }
+
+        .spinner {
+            margin: auto;
+        }
+    }
+
+    .footer {
+        border-top: 1px solid #666;
+        height: 30%;
+        max-height: 30%;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .spinner {
+            margin: auto;
+            margin-top: 30px;
+        }
+    }
+}

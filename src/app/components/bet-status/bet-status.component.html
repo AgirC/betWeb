@@ -1,0 +1,10 @@
+<div
+  class="status-component"
+  [ngClass]="{
+    'in-game': betStatus === betStatusEnum.IN_GAME,
+    'finished': betStatus === betStatusEnum.FINISHED,
+    'not-started': betStatus === betStatusEnum.NOT_STARTED
+  }"
+>
+  <span>{{ "bet.status." + betStatus | translate }}</span>
+</div>
